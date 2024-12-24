@@ -1,0 +1,276 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 3,
+  "numPassedTestSuites": 2,
+  "numPassedTests": 11,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 3,
+  "numTotalTests": 14,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1735056599754,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Test"
+        }
+      ],
+      "endTime": 1735056600819,
+      "message": "",
+      "name": "/Users/aorlando/Documents/react-agent-js/src/react_agent/tests/unit/graph.test.ts",
+      "startTime": 1735056599863,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["VectorStoreTool"],
+          "duration": 1713,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "VectorStoreTool should upsert vectors successfully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should upsert vectors successfully"
+        },
+        {
+          "ancestorTitles": ["VectorStoreTool"],
+          "duration": 33,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "VectorStoreTool should query vectors successfully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should query vectors successfully"
+        },
+        {
+          "ancestorTitles": ["VectorStoreTool"],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "VectorStoreTool should handle errors gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should handle errors gracefully"
+        },
+        {
+          "ancestorTitles": ["VectorStoreTool"],
+          "duration": 25,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "VectorStoreTool should handle malformed vectors gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should handle malformed vectors gracefully"
+        }
+      ],
+      "endTime": 1735056602888,
+      "message": "",
+      "name": "/Users/aorlando/Documents/react-agent-js/src/react_agent/tests/vector_store.test.ts",
+      "startTime": 1735056599873,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 107,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "DocumentProcessor should process a document and extract claims",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should process a document and extract claims"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 2186,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "DocumentProcessor should validate a claim",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should validate a claim"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 3,
+          "failureDetails": [
+            {
+              "matcherResult": {
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"[https://nasa.gov/earth]\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[39m\n\u001b[31m# Test Research Document·\u001b[39m\n\u001b[31mThis is a test document with some claims.·\u001b[39m\n\u001b[31mUnable to verify claim due to lack of credible sources []. This is a well-established fact.·\u001b[39m\n\u001b[31mSome people think the Earth is flat, but this is incorrect.·\u001b[39m\n\u001b[31mClimate change is causing global temperatures to rise.·\u001b[39m\n\u001b[31mAI will revolutionize how we work in the future.\u001b[39m\n\u001b[31m    \"\u001b[39m",
+                "pass": false
+              }
+            }
+          ],
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"[https://nasa.gov/earth]\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[39m\n\u001b[31m# Test Research Document·\u001b[39m\n\u001b[31mThis is a test document with some claims.·\u001b[39m\n\u001b[31mUnable to verify claim due to lack of credible sources []. This is a well-established fact.·\u001b[39m\n\u001b[31mSome people think the Earth is flat, but this is incorrect.·\u001b[39m\n\u001b[31mClimate change is causing global temperatures to rise.·\u001b[39m\n\u001b[31mAI will revolutionize how we work in the future.\u001b[39m\n\u001b[31m    \"\u001b[39m\n    at Object.<anonymous> (/Users/aorlando/Documents/react-agent-js/src/react_agent/tests/document_processor.test.ts:103:28)"
+          ],
+          "fullName": "DocumentProcessor should update document with citations",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "failed",
+          "title": "should update document with citations"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "DocumentProcessor should handle non-existent files gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should handle non-existent files gracefully"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "DocumentProcessor should handle invalid actions gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should handle invalid actions gracefully"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "DocumentProcessor should handle invalid JSON input gracefully",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should handle invalid JSON input gracefully"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "DocumentProcessor should handle validation without prior processing",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should handle validation without prior processing"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 2055,
+          "failureDetails": [
+            {
+              "matcherResult": {
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                "pass": false
+              }
+            }
+          ],
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at Object.<anonymous> (/Users/aorlando/Documents/react-agent-js/src/react_agent/tests/document_processor.test.ts:181:38)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"
+          ],
+          "fullName": "DocumentProcessor should validate a claim using Tavily search",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "status": "failed",
+          "title": "should validate a claim using Tavily search"
+        },
+        {
+          "ancestorTitles": ["DocumentProcessor"],
+          "duration": 1815,
+          "failureDetails": [
+            {
+              "matcherResult": {
+                "actual": true,
+                "expected": false,
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
+            }
+          ],
+          "failureMessages": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at Object.<anonymous> (/Users/aorlando/Documents/react-agent-js/src/react_agent/tests/document_processor.test.ts:202:35)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"
+          ],
+          "fullName": "DocumentProcessor should handle validation of controversial claims appropriately",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "failed",
+          "title": "should handle validation of controversial claims appropriately"
+        }
+      ],
+      "endTime": 1735056607685,
+      "message": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mDocumentProcessor › should update document with citations\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n    Expected substring: \u001b[32m\"[https://nasa.gov/earth]\"\u001b[39m\n    Received string:    \u001b[31m\"\u001b[39m\n    \u001b[31m# Test Research Document·\u001b[39m\n    \u001b[31mThis is a test document with some claims.·\u001b[39m\n    \u001b[31mUnable to verify claim due to lack of credible sources []. This is a well-established fact.·\u001b[39m\n    \u001b[31mSome people think the Earth is flat, but this is incorrect.·\u001b[39m\n    \u001b[31mClimate change is causing global temperatures to rise.·\u001b[39m\n    \u001b[31mAI will revolutionize how we work in the future.\u001b[39m\n    \u001b[31m    \"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 101 |\u001b[39m       fs\u001b[33m.\u001b[39mreadFile(join(researchDir\u001b[33m,\u001b[39m testFilePath)\u001b[33m,\u001b[39m \u001b[32m'utf-8'\u001b[39m)\u001b[22m\n\u001b[2m     \u001b[90m 102 |\u001b[39m     )\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 103 |\u001b[39m     expect(updatedContent)\u001b[33m.\u001b[39mtoContain(\u001b[32m'[https://nasa.gov/earth]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 104 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 105 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 106 |\u001b[39m   it(\u001b[32m'should handle non-existent files gracefully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36msrc/react_agent/tests/document_processor.test.ts\u001b[39m\u001b[0m\u001b[2m:103:28)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mDocumentProcessor › should validate a claim using Tavily search\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n    Expected: > \u001b[32m0\u001b[39m\n    Received:   \u001b[31m0\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 179 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mresult)\u001b[33m.\u001b[39mtoBeDefined()\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 180 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39misValid)\u001b[33m.\u001b[39mtoBeDefined()\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 181 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39mconfidence)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m     |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 182 |\u001b[39m     expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(parsed\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39msources))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 183 |\u001b[39m     \u001b[22m\n\u001b[2m     \u001b[90m 184 |\u001b[39m     \u001b[90m// If the claim is invalid, it should have a suggested correction\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36msrc/react_agent/tests/document_processor.test.ts\u001b[39m\u001b[0m\u001b[2m:181:38)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mDocumentProcessor › should handle validation of controversial claims appropriately\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32mfalse\u001b[39m\n    Received: \u001b[31mtrue\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 200 |\u001b[39m     \u001b[22m\n\u001b[2m     \u001b[90m 201 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 202 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39misValid)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 203 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39mconfidence)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m0.5\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 204 |\u001b[39m     expect(parsed\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39msuggestedCorrection)\u001b[33m.\u001b[39mtoBeDefined()\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 205 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36msrc/react_agent/tests/document_processor.test.ts\u001b[39m\u001b[0m\u001b[2m:202:35)\u001b[22m\u001b[2m\u001b[22m\n",
+      "name": "/Users/aorlando/Documents/react-agent-js/src/react_agent/tests/document_processor.test.ts",
+      "startTime": 1735056599863,
+      "status": "failed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

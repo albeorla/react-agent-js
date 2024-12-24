@@ -15,10 +15,27 @@ async function callModel(
   /** Call the LLM powering our agent. **/
   const configuration = ensureConfiguration(config);
 
-  // Feel free to customize the prompt, model, and other logic!
-  const model = (await loadChatModel(configuration.model)).bindTools(TOOLS);
+  if (!configuration.model) {
+    throw new Error("Model configuration is required");
+  }
 
-  const response = await model.invoke([
+  // Feel free to customize the prompt, model, and other logic!
+  const model = await loadChatModel(configuration.model);
+  if (!model) {
+    throw new Error("Failed to load chat model");
+  }
+
+  // Check if bindTools method exists
+  if (typeof model.bindTools !== 'function') {
+    throw new Error("Model does not support tool binding");
+  }
+
+  const modelWithTools = model.bindTools(TOOLS);
+  if (!modelWithTools) {
+    throw new Error("Failed to bind tools to model");
+  }
+
+  const response = await modelWithTools.invoke([
     {
       role: "system",
       content: configuration.systemPromptTemplate.replace(
@@ -36,15 +53,24 @@ async function callModel(
 // Define the function that determines whether to continue or not
 function routeModelOutput(state: typeof MessagesAnnotation.State): string {
   const messages = state.messages;
-  const lastMessage = messages[messages.length - 1];
-  // If the LLM is invoking tools, route there.
-  if ((lastMessage as AIMessage)?.tool_calls?.length || 0 > 0) {
-    return "tools";
-  }
-  // Otherwise end the graph.
-  else {
+  if (!messages || messages.length === 0) {
     return "__end__";
   }
+
+  const lastMessage = messages[messages.length - 1];
+  if (!lastMessage) {
+    return "__end__";
+  }
+  
+  // Check if lastMessage is an AIMessage and has tool_calls
+  if (typeof lastMessage._getType === 'function' &&
+      lastMessage._getType() === "ai") {
+    const aiMessage = lastMessage as AIMessage;
+    return aiMessage.tool_calls?.length ? "tools" : "__end__";
+  }
+
+  // Otherwise end the graph.
+  return "__end__";
 }
 
 // Define a new graph. We use the prebuilt MessagesAnnotation to define state:
